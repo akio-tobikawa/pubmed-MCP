@@ -1,0 +1,19 @@
+{
+  "name": "pubmed-openscholar-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for OpenScholar / Semantic Scholar API - Academic paper search and retrieval",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
