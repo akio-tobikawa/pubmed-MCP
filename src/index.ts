@@ -5,6 +5,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { PluginRegistry } from "./plugins/registry.js";
 import { loadPluginsFromDir } from "./plugins/loader.js";
 import semanticScholarPlugin from "./plugins/semantic-scholar.js";
+import context7Plugin from "./plugins/context7.js";
 import { resolve } from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
@@ -19,8 +20,9 @@ const server = new McpServer({
 async function main() {
   const registry = new PluginRegistry();
 
-  // Built-in plugin
+  // Built-in plugins
   registry.register(semanticScholarPlugin);
+  registry.register(context7Plugin);
 
   // Load external plugins from the plugins/ directory next to the dist output
   const externalPluginsDir =
